@@ -1,32 +1,42 @@
 
 package lista;
 
-public class No<Tipo> {
-    private Tipo elemento;
-    private No<Tipo> proximo;
+public class No<TipoElemento> {
+    private TipoElemento elemento;
+    private No<TipoElemento> proximo;
 
-    public No(Tipo elemento) {
+    //--!!--//
+
+    // Metodos construtores.
+    public No(TipoElemento elemento) {
         this.elemento = elemento;
         this.proximo = null;
     }
-    public No(Tipo elemento, No<Tipo> proximo) {
+    public No(TipoElemento elemento, No<TipoElemento> proximo) {
         this.elemento = elemento;
         this.proximo = proximo;
     }
 
-    public Tipo getElemento() {
+    //--!!--//
+
+    // Métodos Getters e Setters padrões.
+    public TipoElemento getElemento() {
         return elemento;
     }
-    public void setElemento(Tipo elemento) {
+    public void setElemento(TipoElemento elemento) {
         this.elemento = elemento;
     }
-    public No<Tipo> getProximo() {
+
+    public No<TipoElemento> getProximo() {
         return proximo;
     }
-    public void setProximo(No<Tipo> proximo) {
+    public void setProximo(No<TipoElemento> proximo) {
         this.proximo = proximo;
     }
 
+    //--!!--//
+
+    // Sobreposição do método toString() para exibir o No de forma legível.
     @Override
     public String toString() {
         return "No{" + "elemento=" + elemento + ", proximo=" + proximo + '}';
